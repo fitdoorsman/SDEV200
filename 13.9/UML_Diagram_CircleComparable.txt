@@ -1,0 +1,25 @@
+<<abstract>> GeometricObject
+----------------------------
+- color: String
+- filled: boolean
+----------------------------
++ getColor(): String
++ setColor(String): void
++ isFilled(): boolean
++ setFilled(boolean): void
++ getArea(): double
++ getPerimeter(): double
+
+Circle implements Comparable<Circle>
+----------------------------
+- radius: double
+----------------------------
++ Circle()
++ Circle(double)
++ getRadius(): double
++ setRadius(double): void
++ getArea(): double
++ getPerimeter(): double
++ compareTo(Circle): int
++ equals(Object): boolean
++ printCircle(): void
