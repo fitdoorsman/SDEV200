@@ -1,3 +1,5 @@
+package com.example.demo;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -8,21 +10,17 @@ import javafx.stage.Stage;
 public class Exercise14_01 extends Application {
     @Override
     public void start(Stage primaryStage) {
-        // Load the images
-        ImageView imageView1 = new ImageView(new Image("image/germany.gif"));
-        ImageView imageView2 = new ImageView(new Image("image/china.gif"));
-        ImageView imageView3 = new ImageView(new Image("image/france.gif"));
-        ImageView imageView4 = new ImageView(new Image("image/us.gif"));
+        // Load the images from the resources folder
+        ImageView imageView1 = new ImageView(new Image(getClass().getResource("/image/germany.gif").toExternalForm()));
+        ImageView imageView2 = new ImageView(new Image(getClass().getResource("/image/china.gif").toExternalForm()));
+        ImageView imageView3 = new ImageView(new Image(getClass().getResource("/image/france.gif").toExternalForm()));
+        ImageView imageView4 = new ImageView(new Image(getClass().getResource("/image/us.gif").toExternalForm()));
 
         // Set fixed size (optional)
-        imageView1.setFitWidth(150);
-        imageView1.setFitHeight(100);
-        imageView2.setFitWidth(150);
-        imageView2.setFitHeight(100);
-        imageView3.setFitWidth(150);
-        imageView3.setFitHeight(100);
-        imageView4.setFitWidth(150);
-        imageView4.setFitHeight(100);
+        imageView1.setFitWidth(150); imageView1.setFitHeight(100);
+        imageView2.setFitWidth(150); imageView2.setFitHeight(100);
+        imageView3.setFitWidth(150); imageView3.setFitHeight(100);
+        imageView4.setFitWidth(150); imageView4.setFitHeight(100);
 
         // Create a GridPane and add the images
         GridPane pane = new GridPane();
